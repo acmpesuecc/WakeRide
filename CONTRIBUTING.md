@@ -25,26 +25,7 @@ to <thisisselva18@gmail.com>.
 ## I Have a Question
 
 If you want to ask a question, you could do it via the chat under the issues. Contacting the maintainer directly is strictly prohibited unless deemed necessary.
-<!--
-You might want to create a separate issue tag for questions and include it in this description. People should then tag their issues accordingly.
 
-Depending on how large the project is, you may want to outsource the questioning, e.g. to Stack Overflow or Gitter. You may add additional contact and information possibilities:
-- IRC
-- Slack
-- Gitter
-- Stack Overflow tag
-- Blog
-- FAQ
-- Roadmap
-- E-Mail List
-- Forum
--->
-
-### Suggesting Enhancements
-
-This section guides you through submitting an enhancement suggestion for WakeRide, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help us to understand your suggestion and find related suggestions.
-
-<!-- omit in toc -->
 #### Before Submitting a PR
 
 - Make sure that you are using the latest version.
@@ -52,7 +33,6 @@ This section guides you through submitting an enhancement suggestion for WakeRid
 
 <!-- omit in toc -->
 #### How Do I Submit a Good PR?
-ancement suggestions are tracked as [GitHub issues](https://github.com/acmpesuecc/WakeRide/issues).
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion]
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
@@ -60,4 +40,3 @@ ancement suggestions are tracked as [GitHub issues](https://github.com/acmpesuec
 - You may want to **include screenshots or screen recordings** which help you demonstrate the steps or point out the part which the suggestion is related to. You can use [LICEcap](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and the built-in [screen recorder in GNOME](https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en) or [SimpleScreenRecorder](https://github.com/MaartenBaert/ssr) on Linux. <!-- this should only be included if the project has a GUI -->
 - **Explain why this enhancement/feature would be useful** to most WakeRide users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
 
-<!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
