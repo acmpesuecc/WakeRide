@@ -3,16 +3,7 @@
 
 First off, thanks for taking the time to contribute to WakeRide! 
 
-All types of contributions are encouraged and valued. See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for me and smooth out the experience for all involved.
-
 <!-- omit in toc -->
-## Table of Contents
-
-- [Code of Conduct](#code-of-conduct)
-- [I Have a Question](#i-have-a-question)
-  - [I Want To Contribute](#i-want-to-contribute)
-  - [Suggesting Enhancements/Features](#suggesting-enhancements-features)
-- [Commit Messages](#commit-messages)
 
 ## Code of Conduct
 
@@ -20,7 +11,6 @@ This project and everyone participating in it is governed by the
 [WakeRide Code of Conduct](https://github.com/acmpesuecc/WakeRide/blob//CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to <thisisselva18@gmail.com>.
-
 
 ## I Have a Question
 
