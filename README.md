@@ -72,3 +72,6 @@ The project is structured to separate concerns, making it easier to navigate and
 *   `android/app/src/main/kotlin/com/example/bus_app/MainActivity.kt`: Native Android code responsible for fetching, playing, and stopping system ringtones via a method channel.
 *   `assets/`: Includes the Lottie JSON animation (`Bell_anim.json`) and custom fonts (`Gilroy`).
 *   `pubspec.yaml`: Defines project dependencies, assets, and custom fonts.
+
+## Contact / Community Info
+Communication to be done via GitHub PRs and messages only.
