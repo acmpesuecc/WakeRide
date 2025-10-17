@@ -1,5 +1,5 @@
-import 'package:bus_app/pages/bus_metro.dart';
-import 'package:bus_app/pages/cab_auto.dart';
+import 'package:bus_app/pages/bus_metro.dart' as bus;
+import 'package:bus_app/pages/cab_auto.dart' as cab;
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:animate_do/animate_do.dart';
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => BusmetroPage()),
+                      MaterialPageRoute(builder: (context) => bus.BusmetroPage()),
                     );
                   },
                 ),
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CabautoPage()),
+                      MaterialPageRoute(builder: (context) => cab.CabAutoPage()),
                     );
                   },
                 ),
