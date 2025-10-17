@@ -134,6 +134,8 @@ class SButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -142,7 +144,18 @@ class SButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: borderColor, width: 1),
+          border: Border.all(
+            color: isDarkMode ? Colors.white : Colors.black,
+            width: 2,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: (isDarkMode ? Colors.white : Colors.black).withOpacity(0.3),
+              offset: const Offset(0, 4),
+              blurRadius: 0,
+              spreadRadius: 0,
+            ),
+          ],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
