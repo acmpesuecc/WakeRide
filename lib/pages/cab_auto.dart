@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:bus_app/pages/ringtones.dart';
 import 'package:bus_app/pages/openstreetmap.dart';
 
-/// Shared style for both buttons — white background, black border/text
 final ButtonStyle _sharedButtonStyle = OutlinedButton.styleFrom(
   backgroundColor: Colors.white,
   foregroundColor: Colors.black,
@@ -13,7 +12,6 @@ final ButtonStyle _sharedButtonStyle = OutlinedButton.styleFrom(
   side: const BorderSide(color: Colors.black, width: 2.0),
 );
 
-/// A button styled as an OutlinedButton with a simple white/black theme
 class OpenStreetMapsButton extends StatelessWidget {
   const OpenStreetMapsButton({super.key});
 
@@ -54,7 +52,6 @@ class OpenStreetMapsButton extends StatelessWidget {
   }
 }
 
-/// The main Cab/Auto page — same UI style as Bus/Metro
 class CabAutoPage extends StatefulWidget {
   const CabAutoPage({super.key});
   @override
@@ -70,10 +67,15 @@ class _CabAutoPageState extends State<CabAutoPage> {
         centerTitle: true,
         title: const Text(
           "Cab/Auto",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
+          ),
         ),
-        backgroundColor: const Color(0xFFE6E0F1), // same light purple as Bus/Metro
-        elevation: 0,
+        surfaceTintColor: Colors.purple,
+        elevation: 5.0,
+        shadowColor: Colors.white,
+        backgroundColor: Colors.white, // same as WakeRide
       ),
       body: Center(
         child: Padding(
