@@ -19,90 +19,100 @@ class HomePage extends StatelessWidget {
         elevation: 5.0,
         shadowColor: Colors.white,
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              FadeInDown(
-                duration: Duration(milliseconds: 1000),
-                delay: const Duration(milliseconds: 400),
-                child: Container(
-                  margin: const EdgeInsets.only(top: 10, left: 5, right: 5),
-                  width: size.width / 1.5,
-                  height: size.height / 3,
-                  child: Lottie.asset("assets/Bell_anim.json", animate: true),
-                ),
-              ),
-              const SizedBox(height: 5.0),
-              FadeInDown(
-                duration: Duration(milliseconds: 1000),
-                delay: const Duration(milliseconds: 600),
-                child: const Text(
-                  "Choose your Mode of Transport",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+      body: Container( // 🔹 Added container with background
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/background.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                FadeInDown(
+                  duration: Duration(milliseconds: 1000),
+                  delay: const Duration(milliseconds: 400),
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10, left: 5, right: 5),
+                    width: size.width / 1.5,
+                    height: size.height / 3,
+                    child: Lottie.asset("assets/Bell_anim.json", animate: true),
                   ),
                 ),
-              ),
-              const SizedBox(height: 15.0),
-              FadeInDown(
-                duration: Duration(milliseconds: 1000),
-                delay: const Duration(milliseconds: 800),
-                child: SButton(
-                  size: size,
-                  borderColor: Colors.grey,
-                  color: Colors.white,
-                  img: 'assets/bus.png',
-                  text: "Bus/Metro",
-                  fontWeight: FontWeight.w700,
-                  textStyle: null,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => bus.BusmetroPage()),
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(height: 20),
-              FadeInDown(
-                duration: Duration(milliseconds: 1000),
-                delay: const Duration(milliseconds: 800),
-                child: SButton(
-                  size: size,
-                  borderColor: Colors.grey,
-                  color: Colors.white,
-                  img: 'assets/taxi.png',
-                  text: "Cab/Auto Rickshaw",
-                  fontWeight: FontWeight.w700,
-                  textStyle: null,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => cab.CabAutoPage()),
-                    );
-                  },
-                ),
-              ),
-              Expanded(child: Container()),
-              FadeInUp(
-                duration: Duration(milliseconds: 1000),
-                delay: const Duration(milliseconds: 400),
-                child: const Text(
-                  "© 2025 BuStop",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
+                const SizedBox(height: 5.0),
+                FadeInDown(
+                  duration: Duration(milliseconds: 1000),
+                  delay: const Duration(milliseconds: 600),
+                  child: const Text(
+                    "Choose your Mode of Transport",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
-            ],
+                const SizedBox(height: 15.0),
+                FadeInDown(
+                  duration: Duration(milliseconds: 1000),
+                  delay: const Duration(milliseconds: 800),
+                  child: SButton(
+                    size: size,
+                    borderColor: Colors.grey,
+                    color: Colors.white,
+                    img: 'assets/bus.png',
+                    text: "Bus/Metro",
+                    fontWeight: FontWeight.w700,
+                    textStyle: null,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => bus.BusmetroPage()),
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(height: 20),
+                FadeInDown(
+                  duration: Duration(milliseconds: 1000),
+                  delay: const Duration(milliseconds: 800),
+                  child: SButton(
+                    size: size,
+                    borderColor: Colors.grey,
+                    color: Colors.white,
+                    img: 'assets/taxi.png',
+                    text: "Cab/Auto Rickshaw",
+                    fontWeight: FontWeight.w700,
+                    textStyle: null,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => cab.CabAutoPage()),
+                      );
+                    },
+                  ),
+                ),
+                Expanded(child: Container()),
+                FadeInUp(
+                  duration: Duration(milliseconds: 1000),
+                  delay: const Duration(milliseconds: 400),
+                  child: const Text(
+                    "© 2025 BuStop",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),
