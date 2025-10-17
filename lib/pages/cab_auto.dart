@@ -1,21 +1,83 @@
 import 'package:flutter/material.dart';
-import 'ringtones.dart';
+import 'package:bus_app/pages/ringtones.dart';
+import 'package:bus_app/pages/openstreetmap.dart';
 
-class CabautoPage extends StatefulWidget {
-  const CabautoPage({super.key});
+
+class OpenStreetMapsButton extends StatelessWidget {
+  const OpenStreetMapsButton({super.key});
 
   @override
-  State<CabautoPage> createState() => _CabautoPageState();
+  Widget build(BuildContext context) {
+    return Semantics(
+      button: true,
+      label: 'OpenStreetMaps',
+      hint: 'Opens the map screen',
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => OpenstreetmapScreen()),
+            );
+          },
+          borderRadius: BorderRadius.circular(12),
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.purple.shade400, Colors.purple.shade600],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.purple.withOpacity(0.3),
+                  blurRadius: 8,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.map_rounded, color: Colors.white, size: 22),
+                  const SizedBox(width: 10),
+                  Text(
+                    'OpenStreetMaps',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
-class _CabautoPageState extends State<CabautoPage> {
+
+class BusmetroPage extends StatefulWidget {
+  const BusmetroPage({super.key});
+  @override
+  State<BusmetroPage> createState() => _BusmetroPageState();
+}
+
+class _BusmetroPageState extends State<BusmetroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Cab/Auto Rickshaw"),
+        title: Text("Bus/Metro"),
         surfaceTintColor: Colors.purple,
         elevation: 5.0,
         shadowColor: Colors.white,
@@ -26,6 +88,9 @@ class _CabautoPageState extends State<CabautoPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              const SizedBox(height: 16),
+              const OpenStreetMapsButton(),
+
               OutlinedButton(
                 style: ButtonStyle(
                   foregroundColor: WidgetStatePropertyAll(Colors.black),
