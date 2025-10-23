@@ -52,40 +52,62 @@ class HomePage extends StatelessWidget {
               FadeInDown(
                 duration: Duration(milliseconds: 1000),
                 delay: const Duration(milliseconds: 800),
-                child: SButton(
-                  size: size,
-                  borderColor: Colors.grey,
-                  color: Colors.white,
-                  img: 'assets/bus.png',
-                  text: "Bus/Metro",
-                  fontWeight: FontWeight.w700,
-                  textStyle: null,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => bus.BusmetroPage()),
-                    );
-                  },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 6),
+                    ),
+                  ),
+                  child: SButton(
+                    size: size,
+                    borderColor: Colors.grey,
+                    color: Colors.white,
+                    img: 'assets/taxi.png',
+                    text: "Bus/Metro",
+                    fontWeight: FontWeight.w700,
+                    textStyle: null,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => bus.BusmetroPage(),
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
               FadeInDown(
                 duration: Duration(milliseconds: 1000),
                 delay: const Duration(milliseconds: 800),
-                child: SButton(
-                  size: size,
-                  borderColor: Colors.grey,
-                  color: Colors.white,
-                  img: 'assets/taxi.png',
-                  text: "Cab/Auto Rickshaw",
-                  fontWeight: FontWeight.w700,
-                  textStyle: null,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => cab.CabAutoPage()),
-                    );
-                  },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 6),
+                    ),
+                  ),
+                  child: SButton(
+                    size: size,
+                    borderColor: Colors.grey,
+                    color: Colors.white,
+                    img: 'assets/taxi.png',
+                    text: "Cab/Auto Rickshaw",
+                    fontWeight: FontWeight.w700,
+                    textStyle: null,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => cab.CabAutoPage(),
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
               Expanded(child: Container()),
